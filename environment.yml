@@ -1,0 +1,52 @@
+# we used the local conda env
+#  conda env create --prefix ./env -f environment.yml
+#
+#  we assume you have a baseline conda env
+#  oplatek successfully set it up on ufal cluster using
+#
+# Setup conda base environment:
+# Go to https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links and select Miniconda 3
+#     Linux 64-bit version
+# Go to your directory where you want to stare conda base installation
+#      e.g. /lnet/work/people/oplatek/conda
+# Wget the installer e.g. wget https://repo.anaconda.com/miniconda/Miniconda3-py311_23.5.2-0-Linux-x86_64.sh
+# Install the miniconda bash Miniconda3-* -b -p $PWD/miniconda3_YOUR_NAME/ e.g. bash
+#        Miniconda3-py311_23.5.2-0-Linux-x86_64.sh -b -p $PWD/miniconda3_py11_23.5.2
+# Run conda init which will modify your ~/.bashrc to source conda base env by default.
+#     e.g. ./miniconda3_py11_23.5.2/bin/conda init
+name: chateval-baseline-llm
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch=2.0.1
+  - pytorch-cuda=11.8
+  - pip
+  - pip:
+    - scipy==1.10.1
+    - scikit-learn==1.2.2
+    - bitsandbytes==0.41.0
+    - transformers>=4.31.0
+    - peft>=0.4.0
+    - accelerate>=0.21.0
+    - einops==0.6.1
+    - pandas==1.5.3
+    - openai==0.27.2
+    - pynvml==11.5.0
+    - datasets>=2.10.1
+    - protobuf==3.20
+    - langchain==0.0.92
+    - faiss-cpu==1.7.3
+    - plda@git+https://github.com/oplatek/plda@abde92c48916738c4e90cc488e360723ed921dc8#egg=plda
+    - pytorch-lightning==1.5.10
+    - torch_optimizer==0.3.0
+    - matplotlib==3.7.1
+    - sentencepiece==0.1.99
+    - sentence_transformers==2.2.2
+    # assuming you want always the latest version but we used 0.15.7
+    - wandb>=0.15.7
+    # logging debugging tools for oplatek
+    - ipdb
+    - exp-notifier
