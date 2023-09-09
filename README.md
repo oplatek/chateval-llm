@@ -11,5 +11,15 @@
 
 # Chateval-LLM Package
 
+## Installation
+```
+# Optional for reinstallation
+conda deactivate; rm -rf env; 
+# Installing new conda environment and editable pip moosenet package
+conda env create --prefix ./env -f environment.yml \
+  && conda activate ./env \
+  && pip install -e .[dev] 
+```
+
 <!-- link the prompts, says prompts with examples works best link the llama2 syntax-->
 
