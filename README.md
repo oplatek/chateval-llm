@@ -9,7 +9,7 @@
 
 <p>&nbsp;</p>
 
-# Chateval-LLM Package
+# Chateval Package
 
 ## Installation
 ```
