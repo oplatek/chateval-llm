@@ -23,3 +23,6 @@ conda env create --prefix ./env -f environment.yml \
 
 <!-- link the prompts, says prompts with examples works best link the llama2 syntax-->
 
+## Acknowledgements
+This work was co-funded by Charles University projects GAUK 40222, SVV 260575 and the European Union (ERC, NG-NLG, 101039303).
+<img src="https://ufal.mff.cuni.cz/~odusek/2024/images/LOGO_ERC-FLAG_FP.png" alt="erc-logo" height="150"/>
